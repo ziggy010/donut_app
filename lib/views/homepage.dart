@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page_compnents.dart/item_list.dart';
+import 'home_page_compnents.dart/text_widget.dart';
 import 'home_page_compnents.dart/top_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,30 +15,11 @@ class HomePage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TopBar(),
-              RichText(
-                text: TextSpan(
-                  text: 'I want to ',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontFamily: 'poppins',
-                  ),
-                  children: [
-                    TextSpan(
-                      text: 'Eat',
-                      style: TextStyle(
-                        fontSize: 35,
-                        color: Colors.black,
-                        fontFamily: 'poppins',
-                        fontWeight: FontWeight.w800,
-                        decoration: TextDecoration.underline,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              TextWidget(),
+              item_list(),
             ],
           ),
         ),
